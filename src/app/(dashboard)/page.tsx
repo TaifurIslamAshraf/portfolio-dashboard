@@ -1,10 +1,5 @@
-import { cn } from "@/lib/utils";
-import { styles } from "../styles";
+const Dashboard = () => {
+  return <div>Dashboard</div>;
+};
 
-export default function Home() {
-  return (
-    <div className={cn(styles.paddingY, styles.paddingX, styles.layoutML)}>
-      Hello World
-    </div>
-  );
-}
+export default Dashboard;
