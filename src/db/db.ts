@@ -12,4 +12,6 @@ export const pool = new Pool({
   connectionString: config.dbUrl + sslMode,
 });
 
-export const db = drizzle(pool, { logger: true });
+export const db = drizzle(pool, {
+  logger: true,
+});
