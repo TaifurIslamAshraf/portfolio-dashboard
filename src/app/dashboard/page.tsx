@@ -13,11 +13,8 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import config from "@/lib/config";
 
 export default function Page() {
-  console.log(config.dbUrl);
-
   return (
     <SidebarProvider>
       <AppSidebar />
