@@ -1,3 +1,6 @@
+import { Toaster } from "@/components/ui/toaster";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
+import SessionWrapper from "@/providers/SessionWrapper";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ReactQueryProvider>
+          <SessionWrapper>
+            <Toaster />
+            {children}
+          </SessionWrapper>
+        </ReactQueryProvider>
       </body>
     </html>
   );

@@ -4,7 +4,7 @@ const projectDir = process.cwd();
 loadEnvConfig(projectDir);
 
 const config = {
-  dbUrl: process.env.DATABASE_UR!,
+  serverApi: process.env.NEXT_PUBLIC_SERVER_API!,
   appENV: process.env.APP_ENV!,
 };
 
