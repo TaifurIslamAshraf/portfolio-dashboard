@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronsUpDown, LogOut } from "lucide-react";
+import { ChevronsUpDown, KeySquare, LogOut, UserRoundPen } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -18,6 +18,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { signOut, useSession } from "next-auth/react";
+import Link from "next/link";
 
 export function NavUser({
   user,
@@ -79,6 +80,19 @@ export function NavUser({
                 </div>
               </div>
             </DropdownMenuLabel>
+
+            <Link href={"/profile"}>
+              <DropdownMenuItem className="cursor-pointer">
+                <KeySquare />
+                Profile
+              </DropdownMenuItem>
+            </Link>
+            <Link href={"/update-password"}>
+              <DropdownMenuItem className="cursor-pointer">
+                <UserRoundPen />
+                Update Password
+              </DropdownMenuItem>
+            </Link>
             <DropdownMenuSeparator />
 
             <DropdownMenuItem onClick={handleSignout}>

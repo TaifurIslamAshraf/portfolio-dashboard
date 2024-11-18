@@ -1,6 +1,11 @@
 "use client";
 
-import { ChevronRight, LayoutDashboard, type LucideIcon } from "lucide-react";
+import {
+  ChevronRight,
+  LayoutDashboard,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 
 import {
   Collapsible,
@@ -39,6 +44,12 @@ export function NavMain({
         <SidebarMenuButton className="" tooltip={"Dashboard"}>
           <LayoutDashboard />
           <span>Dashboard</span>
+        </SidebarMenuButton>
+      </Link>
+      <Link href={"/users"} className="ml-3">
+        <SidebarMenuButton className="" tooltip={"Dashboard"}>
+          <Users />
+          <span>Users</span>
         </SidebarMenuButton>
       </Link>
       <SidebarGroup>

@@ -64,8 +64,9 @@ const Login = () => {
 
     if (signinData?.status === 401) {
       toast.toast({
+        variant: "destructive",
         title: "Invalid Credentials",
-        description: "Invalid Email or Password",
+        description: "Invalid Email or Password Please try again",
       });
       setIsLoading(false);
     } else if (signinData?.ok) {
